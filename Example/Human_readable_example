@@ -1,0 +1,40 @@
+format = Discord Server Modeling Format v.0.0.0a                //Version of DSMS used in the file
+product = Example Discord Server                                //the product this file is for
+version = 0.0.1                                                 //the version fo this file
+
+Server
+  name = Example Server 1                                       //name of the server
+  Roles                                                         //all roles available on the server
+    example_role_1[] s = Example person, other person           //list of people with each role
+    example_role_2[] s = someone else
+  Categories                                                    //the categories available on the server
+    Example_Managed_Category                                    //an example of a managed category
+      manual b = false                                          //is the category in managed by a human?
+      archive b = false                                         //is this an archive for other channels?
+      Channels                                                  //the channels in the category
+        Example_Channel                                         //an example channel
+          channel_type = text                                   //the channel type, options are: text, voice, private, group, category, news, store
+          ID n = 1                                              //The uinque channel ID (This must ge queried from discord)
+        Example_Channel_Two
+          channel_type = voice
+          ID n = 2
+    Example_Manual_Category
+      manual b = true
+      archive b = false
+      Channels
+        Example_Channel
+          channel_type = text
+          ID n = 3
+        Example_Channel_Two
+          channel_type = voice
+          ID n = 4
+    Example_Archive_Category
+      manual b = false
+      archive b = true
+      Channels
+        Example_Channel
+          channel_type = text
+          ID n = 5
+        Example_Channel_Two
+          channel_type = voice
+          ID n = 6

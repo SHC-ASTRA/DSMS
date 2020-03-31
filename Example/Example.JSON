@@ -1,0 +1,61 @@
+{
+    "format": "Discord Server Modeling Format v.0.0.0a",
+    "product": "Example Discord Server",
+    "version": "0.0.1",
+    "Server": {
+      "name": "Example Server 1",
+      "Roles": {
+        "example_role_1": [
+          "Example person",
+          "other person"
+        ],
+        "example_role_2": [
+          "someone else"
+        ]
+      },
+      "Categories": {
+        "Example_Managed_Category": {
+          "manual": false,
+          "archive": false,
+          "Channels": {
+            "Example_Channel": {
+              "channel_type": "text",
+              "ID": 1
+            },
+            "Example_Channel_Two": {
+              "channel_type": "voice",
+              "ID": 2
+            }
+          }
+        },
+        "Example_Manual_Category": {
+          "manual": true,
+          "archive": false,
+          "Channels": {
+            "Example_Channel": {
+              "channel_type": "text",
+              "ID": 3
+            },
+            "Example_Channel_Two": {
+              "channel_type": "voice",
+              "ID": 4
+            }
+          }
+        },
+        "Example_Archive_Category": {
+          "manual": false,
+          "archive": true,
+          "Channels": {
+            "Example_Channel": {
+              "channel_type": "text",
+              "ID": 5
+            },
+            "Example_Channel_Two": {
+              "channel_type": "voice",
+              "ID": 6
+            }
+          }
+        }
+      }
+    }
+  }
